@@ -93,6 +93,15 @@ a {
   color: var(--primary-bg-color);
 }
 /* site-nav */
+.site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--primary-text-color);
+
+  font-weight: 500;
+}
 .site-nav .current {
   color: var(--accent-text-color);
 
@@ -103,16 +112,6 @@ a {
 }
 .site-nav.list {
   display: flex;
-}
-.site-nav .link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-.site-nav a {
-  color: var(--primary-text-color);
-
-  font-weight: 500;
 }
 .site-nav :hover,
 .site-nav :focus {
@@ -132,7 +131,7 @@ a {
   letter-spacing: 0.02em;
   text-align: left;
 }
-.site-phone .itim:not(:last-child) {
+.site-phone .item:not(:last-child) {
   margin-right: 50px;
 }
 .site-phone.list {
@@ -148,10 +147,34 @@ a {
 .site-phone :focus {
   color: var(--accent-text-color);
 }
+.mail::before {
+  content: " ";
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url("../images/mail.svg");
+  background-size: contain;
+  outline: 1px red;
+}
+
 /* Шапка */
 /* hero */
 .hero {
   background-color: var(--bg-hero-color);
+  /* max-width: 1600px; */
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero.jpg");
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+
   padding: 0;
   text-align: center;
   padding-top: 200px;
@@ -162,7 +185,6 @@ a {
   color: var(--primary-bg-color);
   width: 696px;
   height: 120px;
-  /* background-color: var(--bg-hero-color); */
 
   margin: 0 auto;
   margin-bottom: 30px;
@@ -191,30 +213,6 @@ a {
   letter-spacing: 0.06em;
   text-align: center;
 }
-.btn:hover,
-.btn:focus {
-  color: var(--primary-bg-color);
-  background-color: var(--accent-text-color);
-}
-.btn {
-  border-radius: 4px;
-  padding: 6px 22px;
-  border: none;
-
-  color: var(--primary-text-color);
-  background-color: var(--bg-card-color);
-
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.6;
-  letter-spacing: 0.03em;
-  text-align: center;
-}
-/* .btn.current {
-  color: var(--primary-bg-color);
-  background-color: var(--accent-text-color);
-} */
 
 /* особености */
 /* section */
@@ -229,10 +227,10 @@ section {
   display: flex;
   margin: 0 auto;
 }
-.section-itim {
+.section-item {
   width: calc((100%-90px) / 4);
 }
-.section-itim:not(:nth-last-child(-n + 1)) {
+.section-item:not(:nth-last-child(-n + 1)) {
   margin-right: 30px;
 }
 .section-titel {
@@ -241,20 +239,41 @@ section {
 
   color: var(--primary-text-color);
 
-  /* font-family: Roboto;
-    font-size: 14px; */
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-align: left;
 }
+.section-item::before {
+  display: block;
+  content: " ";
+  height: 120px;
+  background-color: var(--bg-card-color);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.antenna::before {
+  background-image: url(../images/antenna.svg);
+  background-size: 70px;
+}
+.clock::before {
+  background-image: url(../images/clock.svg);
+  background-size: 70px;
+}
+.diagram::before {
+  background-image: url(../images/diagram.svg);
+  background-size: 70px;
+}
+.astronaut::before {
+  background-image: url(../images/astronaut.svg);
+  background-size: 70px;
+}
 .text {
   margin: 0 0;
   color: var(--titel-text-color);
 
-  /* font-family: Roboto;
-    font-size: 14px;
-    font-weight: 400; */
   line-height: 24px;
   letter-spacing: 0.03em;
   text-align: left;
@@ -313,6 +332,8 @@ section {
 .work .itim + .itim {
   margin-left: 30px;
 }
+
+/* наша команда */
 /* card */
 .card {
   background-color: var(--bg-card-color);
@@ -326,6 +347,31 @@ section {
   margin-left: 30px;
 }
 /* Projekts */
+.btn:hover,
+.btn:focus {
+  color: var(--primary-bg-color);
+  background-color: var(--accent-text-color);
+}
+.btn {
+  border-radius: 4px;
+  padding: 6px 22px;
+  border: none;
+
+  color: var(--primary-text-color);
+  background-color: var(--bg-card-color);
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+/* .btn.current {
+  color: var(--primary-bg-color);
+  background-color: var(--accent-text-color);
+} */
+
 .heading {
   font-size: 18px;
   font-weight: 700;
