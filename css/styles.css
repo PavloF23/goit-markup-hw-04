@@ -9,6 +9,7 @@
   --bg-card-color: #f5f4fa;
   --bg-group-color: #eeeeee;
   --logo-text-color: #000000;
+  --primary-icon-color: #afb1b8;
 }
 /* html {
     box-sizing: border-box;
@@ -145,18 +146,16 @@ a {
 }
 .site-phone :hover,
 .site-phone :focus {
+  fill: var(--accent-text-color);
   color: var(--accent-text-color);
 }
-.mail::before {
-  content: " ";
+.mail-icon {
+  height: 16px;
   width: 16px;
-  height: 12px;
   margin-right: 10px;
-  background-image: url("../images/mail.svg");
-  background-size: contain;
-  outline: 1px red;
+  position: relative;
+  top: 3px;
 }
-
 /* Шапка */
 /* hero */
 .hero {
@@ -286,7 +285,6 @@ section {
 
   color: var(--primary-text-color);
 
-  /* font-family: Roboto; */
   font-size: 36px;
   font-weight: 700;
   line-height: 1.2;
@@ -313,10 +311,8 @@ section {
 }
 .subject-desc {
   margin: 0;
-
-  /* font-family: Roboto; */
+  margin-bottom: 16px;
   font-size: 16px;
-  /* font-weight: 400; */
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-align: center;
@@ -340,12 +336,60 @@ section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.team > .item {
+  background-color: var(--primary-bg-color);
+  border: 1px solid var(--bg-card-color);
+  border-radius: 4px;
+  box-shadow: 0px 1px, 0px, 2px, rgba(0, 0, 0, 0.2);
+}
 .team.list {
   display: flex;
 }
-.team .itim + .itim {
+.team .item + .item {
   margin-left: 30px;
 }
+/* socials */
+.socials {
+  width: 206px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.socials-item {
+  display: flex;
+}
+.button-icon {
+  border: none;
+  width: 44px;
+  height: 44px;
+  color: var(--primary-icon-color);
+  background-color: var(--primary-bg-color);
+  cursor: pointer;
+}
+.button-icon:hover,
+.button-icon:focus {
+  color: var(--primary-bg-color);
+  border-radius: 50%;
+  background-color: var(--accent-text-color);
+}
+.soc-icon {
+  height: 20px;
+  width: 20px;
+  fill: currentColor;
+}
+.socials-item .item + .item {
+  margin-left: 10px;
+}
+/* social footer */
+.foot-icon {
+  border: none;
+  width: 44px;
+  height: 44px;
+  fill: var(--primary-icon-color);
+  background-color: #ffffff1a;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 /* Projekts */
 .btn:hover,
 .btn:focus {
@@ -367,10 +411,10 @@ section {
   letter-spacing: 0.03em;
   text-align: center;
 }
-/* .btn.current {
+.btn.current {
   color: var(--primary-bg-color);
   background-color: var(--accent-text-color);
-} */
+}
 
 .heading {
   font-size: 18px;
@@ -426,9 +470,25 @@ section {
   padding-bottom: 20px;
   padding-right: 24px;
 }
-/* .projekt:nth-child(3n) {
-  margin-right: 0;
-} */
+/* Постоянные клиенты */
+
+.client .item + .item {
+  margin-left: 30px;
+}
+.link-icon {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  outline: 1px solid var(--primary-icon-color);
+  border-radius: 4px;
+  fill: var(--primary-icon-color);
+}
+.link-icon:hover,
+.link-icon:focus {
+  fill: var(--accent-text-color);
+  outline: 1px solid var(--accent-text-color);
+}
+
 /* Подвал */
 footer {
   background-color: var(--bg-hero-color);
@@ -458,4 +518,22 @@ address {
 } */
 .site-footer .item:not(:nth-last-child(-n + 1)) {
   margin-bottom: 9px;
+}
+.foot {
+  display: flex;
+}
+.soc-foot {
+  width: 206px;
+  margin-top: 12px;
+  margin-left: 70px;
+}
+.site-foot {
+  width: 231px;
+}
+.footer .titel {
+  color: var(--primary-bg-color);
+
+  width: 700;
+  font-size: 14px;
+  line-height: 1.2;
 }
